@@ -21,6 +21,10 @@ void main() {
       expect(engine.compile('SUM(1) + Max(2) + if(true, 1, 2)').functions,
           {'sum', 'max', 'if'});
     });
+    test('variables are listed in source order', () {
+      expect(engine.compile('c + max(a, b) * d').variables.toList(),
+          ['c', 'a', 'b', 'd']);
+    });
     test('index expressions contribute their variables', () {
       expect(engine.compile('xs[i + 1]').variables, {'xs', 'i'});
     });

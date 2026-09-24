@@ -248,6 +248,9 @@ void collectReferences(
     final node = stack.removeLast();
     if (node is VariableNode) variables.add(node.path);
     if (node is CallNode) functions.add(node.name);
-    node.forEachChild(stack.add);
+    // Push children in reverse so they are visited in source order.
+    final children = <Node>[];
+    node.forEachChild(children.add);
+    stack.addAll(children.reversed);
   }
 }
