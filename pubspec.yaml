@@ -2,8 +2,8 @@ name: form_expressions
 description: A safe, sandboxed expression language for dynamic forms. Calculated fields, show/hide conditions, validation rules and text templates.
 version: 0.1.0
 homepage: https://abdeldjalilchougui.biz/
-repository: https://github.com/AbeldjalilChougui/form_expressions
-issue_tracker: https://github.com/AbeldjalilChougui/form_expressions/issues
+repository: https://github.com/AbdeldjalilChougui/form_expressions
+issue_tracker: https://github.com/AbdeldjalilChougui/form_expressions/issues
 topics:
   - expression
   - parser
